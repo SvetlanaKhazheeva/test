@@ -1,0 +1,944 @@
+// Циклы
+из урока 1 пропущенное:
+
+// Даны два числа. Если первое меньше второго на 10, увеличить первое в 2 раза
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int a = 30;
+        int b = 35;
+        
+        System.out.println("a = " + a);
+        
+        if((b - a) >= 10) 
+        {
+            a = a * 2;
+        }
+            
+        System.out.println("a = " + a);
+     }
+}
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int a = 20;
+        int b = 35;
+        
+        System.out.println("a = " + a);
+        
+        boolean x = (b - a) >= 10;
+        
+        if(x) 
+        {
+            a = a * 2;
+        }
+            
+        System.out.println("a = " + a);
+     }
+}
+
+// Даны два числа. Если первое меньше второго на 10, увеличить первое в 2 раза. В противном случае увеличить второе на 5
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int a = 20;
+        int b = 35;
+        
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        
+        if((b - a) >= 10) 
+        {
+            a = a * 2;
+        }
+        else
+        {
+            b = b + 5;
+        }
+
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+     }
+}
+
+// Работа с циклами 
+
+public class HelloWorld{
+
+     public static void main(String []args){
+
+        for(int i = 1; i <= 10; i++)
+        {
+            System.out.print(i + " ");
+        }
+        
+        System.out.println();
+        
+        for(int j = 1; j <= 10; j = j + 2)
+        {
+            System.out.print(j + " ");
+        }
+        
+        System.out.println();
+        
+        for(int k = 1; k <= 10; k = k * 2)
+        {
+            System.out.print(k + " ");
+        }
+        
+        System.out.println();
+        
+        for(int x = 10; x <= 100; x = x + 10)
+        {
+            System.out.print(x + " ");
+        }
+        
+     }
+}
+
+// Task 1
+Напечататьрядчисел 20 ввиде: 20 20 20 20 20 20 20 20 20 20. 
+
+public class HelloWorld{
+
+        public static void main(String []args){
+        
+        for(int i = 0; i < 10; i++)
+        {
+            System.out.print("20 ");
+        }
+        
+     }
+}
+
+// Task 2
+Напечататьчисласледующимобразом:
+10 10.4
+11 11.4
+...
+25 25.4
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        for(int i = 10; i <= 25; i++)
+        {
+            System.out.println(i + " " + i + ".4");
+        }
+     }
+}
+
+// Task 3
+Напечатать таблицу умножения на 7: 
+1 х 7 = 7 
+2 х 7 = 14 
+... 
+9 х 7 = 63 
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        for(int i = 1; i <= 9; i++)
+        {
+            System.out.printf("%d x 7 = %d\n", i, i * 7);
+        }
+     }
+}
+// Task 4
+Найти: 
+1.сумму всех целых чисел от 100 до 500;
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int sum = 0;
+        
+        for(int i = 100; i <= 500; i++)
+        {
+            sum = sum + i;
+        }
+        
+        System.out.print("Sum = " + sum);
+     }
+}
+ответ 120300
+
+// Task 4 
+(здесь наглядно видно как считает эту сумму 120300)
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int sum = 0;
+        
+        for(int i = 100; i <= 500; i++)
+        {
+            System.out.println("i = " + i);
+            System.out.println("old sum = " + sum);
+            sum = sum + i;
+            System.out.println("new sum = " + sum);
+            System.out.println("==================");
+        }
+        
+        System.out.println("sum = " + sum);
+     }
+}
+
+// Task 4
+2.сумму всех целых чисел от a до b (значения a и b вводятся с клавиатуры; b>=a).
+public class HelloWorld{
+s
+
+// WHILE and DO WHILE
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int i = 0;
+        
+        while(i <= 10)
+        {
+            System.out.print(i + " ");
+            i++;
+        }
+    
+        System.out.println();
+    
+    
+        for(int j = 0; j <= 10; j++)          МОЖНО И ЧЕРЕЗ FOR
+        {
+            System.out.print(j + " ");
+        }
+     }
+}
+        
+// WHILE and DO WHILE
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int i = 0;
+        
+        while(i <= 10)
+        {
+            System.out.print(i + " ");
+            i++;
+        }
+    
+        System.out.println();
+    
+    
+        int k = 0;
+        
+        do
+        {
+            System.out.print(k + " ");
+            k++;
+        }
+        while(k <= 10);
+     }
+}
+
+Случай, когда просто while не срабатывает:
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int i = 10;
+        
+        while(i < 10)
+        {
+            System.out.print(i + " ");
+            i++;
+        }
+    
+        System.out.println();
+    
+    
+        int k = 10;
+        
+        do
+        {
+            System.out.print(k + " ");
+            k++;
+        }
+        while(k < 10);
+     }
+}
+
+
+// Task 11
+Найти максимальное из натуральных чисел, непревышающих 5000, которое нацело делится на 39.
+(через цикл for и while)    break - чтоб оставновится на макс числе
+
+public class HelloWorld{
+
+     public static void main(String []args){
+     
+     for(int i = 5000; i >= 0; i--)
+     {
+        if(i % 39 == 0)
+        {
+            System.out.println(i);
+            break;
+        }
+     }
+     
+     int number = 5000;
+     
+     while(number % 39 != 0)
+     {
+         number--;
+     }
+     
+     System.out.println(number);
+    }
+}
+
+
+ 
+// Task 12 (n - кол-во месяцев; S - первонач.сумма; P - величина прибавки)
+Гражданин  1 марта открыл счет в банке, вложив  1000 руб. 
+Через каждый месяц размер вклада увеличивается на 2% от имеющейся суммы.
+Определить:
+1.за какой месяц величина ежемесячного увеличения вклада превысит 30 руб.;
+2.через сколько месяцев размер вклада превысит 1200 ру
+
+МЕСЯЦ И СУММА ВКЛАДА:
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        double x = 1000;
+        double x_new = 0;
+        
+        for (int n = 1; n <= 12; n++)
+    {
+        x = x + x * 0.02;
+        x_new = x * 0.02;
+    
+        System.out.printf("%d = %f\n", n, x);    
+    }    
+    
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Task 12?????
+public class HelloWorld{
+
+     public static void main(String []args){
+
+        int sum = 0;
+        int i = 1000;
+        int P = i * 2 / 100;
+        
+        for(int p1 = i; p1 <= 1200; p1=p1+P)
+        {
+            System.out.println("p1 = " + p1);
+            System.out.println("old sum = " + i);
+            i = sum + p1;
+            System.out.println("new sum = " + i);
+            System.out.println("==================");
+        }
+        
+        System.out.println("sum = " + sum);
+
+
+
+  
+        deposit = 1000
+procent = 0.02
+
+i = 0
+s = 0
+while s <= 30:
+s = procent * deposit
+deposit += s
+i += 1
+print('Месяц { } , сумма процента { } '.format(i, s))
+
+deposit = 1000
+i = 0
+while deposit <= 1200:
+deposit += deposit * procent
+i += 1
+print('Месяц { } , сумма вклада { } '.format(i, deposit))
+
+        
+
+
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int deposit = 1000;
+        int procent = 2 /100;
+        int i = 0;
+        int s = 0;
+        
+        while(s <= 30);
+        s = procent * deposit;
+        s = deposit + s;
+        i = i + 1;
+       
+            System.out.println ("Month, Summa procent" + i, s);
+       
+     }
+} 
+
+
+
+
+
+// Функции и методы
+
+// Найти наибольшее их двух чисел
+
+ПРИМЕР функции:
+public class HelloWorld{
+    
+    public static int maxOfTwoElements(int a, int b)
+    {
+        int max;
+        
+        if(a > b)
+            max = a;
+        else
+            max = b;
+        
+        return max;
+    }
+    
+    public static void main(String []args){
+        
+        int a = 200;
+        int b = 200;
+        
+        System.out.println(maxOfTwoElements(a, b));
+    }
+}
+ПРИМЕР МЕТОДА: (VOID где (int a)
+public class HelloWorld{
+    
+    public static int maxOfTwoElements(int a, int b)
+    {
+        int max;
+        
+        if(a > b)
+            max = a;
+        else
+            max = b;
+        
+        return max;
+    }
+    
+    public static void printOfText(int a)
+    {
+        System.out.println("I am printing!");
+        System.out.println(a);
+        System.out.println("Done!");
+    }
+    
+    public static void main(String []args){
+        
+        int a = 200;
+        int b = 200;
+        
+        printOfText(maxOfTwoElements(a, b));
+        
+    }
+}       
+ 
+ПОМЕНЯТЬ МЕСТАМИ a и b используя 3-ю переменную
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int a = 10;
+        int b = 20;
+        
+        System.out.printf("a = %d, b = %d\n", a, b);
+        
+        int c = a;
+        a = b;
+        b = c; 
+        
+        System.out.printf("a = %d, b = %d\n", a, b);
+     }
+}  
+ответ:
+a = 10, b = 20
+a = 20, b = 10
+
+
+// Task 1
+Напечатать числа в виде следующей таблицы:
+5 5 5 5 5 5
+5 5 5 5 5 5
+5 5 5 5 5 5
+5 5 5 5 5 5
+
+public class HelloWorld{
+    
+    public static void print1()
+    {
+        for(int i = 1; i <= 4; i++)
+        {
+            System.out.println("5 5 5 5 5 5");
+        }
+    }
+    
+    public static void print2(int number, int columns, int rows)
+    {
+        for(int i = 1; i <= rows; i++)
+        {
+            for(int j = 1; j <= columns; j++)
+            {
+                System.out.print(number + " ");    
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String []args){
+        
+        print1();
+        
+        System.out.println();
+        
+        print2(5, 6, 4);
+    }
+}
+
+
+// Task 2
+Напечатать числа в виде следующей таблицы: 
+5
+5 5
+5 5 5
+5 5 5 5
+5 5 5 5 5
+
+public class HelloWorld{
+    
+    public static void print()
+    {
+        for(int i = 1; i <= 5; i++)
+        {
+            for(int j = 1; j <= i; j++)
+            {
+                System.out.print("5 ");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String []args){
+        
+        print();
+        
+    }
+}
+
+
+// Task 3
+Напечататьполнуютаблицусложенияввиде:
+1 + 1 = 2     1 + 2 = 3  ... 1 + 9 = 10
+2 + 1 = 3     2 + 2 = 4  ... 2 + 9 = 11
+...
+9 + 1 = 10   9 + 2 = 11  ... 9 + 9 = 18
+
+решение внизу
+
+
+// Task SR 2   (слишком длинно)
+Даны стороны двух треугольников. 
+Найти сумму их периметров и сумму их площадей. 
+(Определить процедуру для расчета периметра и площади 
+треугольника по его сторонам.)
+public class HelloWorld{
+    
+    public static void main(String []args){
+        
+        double a = 20;
+        double b = 20;
+        double c = 33;
+        double P1 = a + b + c;
+        double p = (a + b + c)/2;
+        double S1 = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+    {    
+        System.out.println(P1);
+    }    
+        
+    {    
+        System.out.println(S1);
+    } 
+    
+    System.out.println();
+    
+        double x = 33;
+        double y = 20;
+        double z = 33;
+        double P2 = x + y + z;
+        double p2 = (x + y + z)/2;
+        double S2 = Math.sqrt(p2*(p2-x)*(p2-y)*(p2-z));
+    {    
+        System.out.println(P2);
+    }    
+        
+    {    
+        System.out.println(S2);
+    } 
+    
+    System.out.println();
+    
+    System.out.println("Perimetr = "+ (P1 + P2));
+    System.out.println("Ploshad = " + (S1 + S2));
+    
+     }
+}
+
+ИЛИ сокращенно
+
+// Task SR 2
+public class HelloWorld{
+    
+    public static void main(String []args){
+        
+        double a = 20;
+        double b = 20;
+        double c = 33;
+        double P1 = a + b + c;
+        double p = (a + b + c)/2;
+        double S1 = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+   
+        double x = 33;
+        double y = 20;
+        double z = 33;
+        double P2 = x + y + z;
+        double p2 = (x + y + z)/2;
+        double S2 = Math.sqrt(p2*(p2-x)*(p2-y)*(p2-z));
+    
+    
+    System.out.println("Perimetr = "+ (P1 + P2));
+    System.out.println("Ploshad = " + (S1 + S2));
+    
+     }
+}
+
+ВЕРНЕЕ с условиями сторон
+// Triangle
+
+public class HelloWorld{
+
+    public static boolean isTriangle(double a, double b, double c)
+    {
+        if((a + b > c) && (b + c > a) && (a + c > b) && (a > 0) && (b > 0) && (c > 0))
+            return true;
+        else
+            return false;
+    }
+
+    public static double perimetr(double a, double b, double c)
+    {
+        if(isTriangle(a,b,c) == true)
+            return a + b + c;
+        else
+            return 0;
+    }
+    
+    public static double square(double a, double b, double c)
+    {
+        if(isTriangle(a,b,c) == true)
+        {
+            double p = perimetr(a,b,c) / 2;
+        
+            double s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        
+            return s;    
+        }
+        else
+            return 0;
+    }
+    
+    public static void main(String []args){
+    
+        System.out.println(perimetr(3,4,5) + perimetr(3,4,5));
+        System.out.println(square(3,4,5) + square(3,4,5));
+       
+        
+
+//Task 7
+Дананепустаяпоследовательностьцелыхчисел, 
+оканчивающаясянулем. 
+Найти: 1.суммувсехчиселпоследовательности; 
+2.количествовсехчиселпоследовательности
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int sum = 0;
+        
+        for(int i = 0; i <= 50; i++)
+        {
+            sum = sum + i;
+        }
+        
+        System.out.print("Sum = " + sum);
+     }
+}
+
+// самостоятельная, тема Циклы
+1.Составить программу вывода любого числа любое заданное число раз
+public class HelloWorld{
+    
+    public static void main(String[] args){
+        
+        int number = 10;
+        int n = 5;
+        for(int i = 1; i <= n; i++)
+        {
+            System.out.println(number);
+        }
+    }
+}
+
+
+2. Напечататьчисласледующимобразом:
+25 25.5 24.8
+26 26.5 25.8
+...
+35 35.5 34.8
+
+public class HelloWorld{
+    
+    public static void main(String []args){
+    
+        for(int x = 25; x <= 35; x++)
+            
+        {
+        System.out.println(x + " " + x + ".5" + " " + (x - 1) + ".8" + " ");
+        }
+     }
+}
+
+3. Напечатать таблицу соответствия между весом 
+в фунтах и весом в килограммах для значений 
+1, 2, ..., 10 фунтов (1 фунт = 453 г).
+
+public class HelloWorld{
+    
+    public static void main(String []args){
+    
+        int funt = 453;
+        
+        for(int x = 1; x <= 10; x++)
+       
+        {
+        System.out.println(x + " funt =" + " " + x * 453 + "gr");
+        }
+     }
+}
+ответ
+1 funt = 453gr
+2 funt = 906gr
+3 funt = 1359gr
+4 funt = 1812gr
+5 funt = 2265gr
+6 funt = 2718gr
+7 funt = 3171gr
+8 funt = 3624gr
+9 funt = 4077gr
+10 funt = 4530gr
+
+// 
+4. Вычислить сумму 1+1/2+1/3+...+1/n.
+public class HelloWorld{
+    
+    public static void main(String []args){
+   
+        int a = 2; 
+        double result = 0;
+        
+        for(int i=1; i<=a; i++)
+        {
+            result+=(double)1/i;
+        }
+        System.out.format("%.3f", result);
+    }
+}
+
+2 вар
+
+import java.util.Scanner;
+ 
+public class Abramyan {
+ 
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+      
+        System.out.print("n=");
+        int n = in.nextInt();
+        double sum = 0;
+        for (int i = 1; i <= n; i++)
+            sum += 1 / (double)i;
+        System.out.print("Sum=" + sum);
+        
+        in.close();    
+    }
+}
+
+в STDIN ввести значение, например 2
+и ответ: n=Sum=1.5
+
+
+
+
+
+// Самостоятельная по теме Методы и функции
+презентация 1
+1.  Составитьпроцедуру, "рисующую" на экране 
+горизонтальную линию из 10 символов "*".
+
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        for(int x = 0; x < 10; x++);
+        
+        
+        System.out.println('*' + "  " );
+
+
+2. Составитьпроцедуру, "рисующую" на экране
+горизонтальную линию из любого числа символов "*"
+        
+public class HelloWorld{
+    
+    public static void main(String[] args){
+        
+        int n = 20;
+        for(int i = 1; i <= n; i++)
+        {
+            System.out.println("*");
+        }
+    }
+}
+
+3.  Даны стороны двух треугольников. 
+Найти сумму их периметров и сумму их площадей. 
+(Определить процедуру для расчета периметра 
+и площади треугольника по его сторонам.  (ВЫШЕ РЕШЕНИЕ)
+
+4. Напечатать числа в виде
+следующей таблицы:
+1 2 ... 10
+1 2 ... 10
+1 2 ... 10
+1 2 ... 10
+
+public class HelloWorld{
+    
+    public static void print(int number, int columns, int rows)
+    {
+        for(int i = 1; i <= rows; i++)
+        {
+            {for(int j = 0; j < columns; j++)
+            
+                System.out.print(j+1 + " ");    
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String []args){
+        
+        print(1, 10, 4);
+    
+    }
+}
+
+
+// Task 3 из функции и методов
+Напечатать полную таблицу сложения в виде:
+1 + 1 = 2     1 + 2 = 3  ... 1 + 9 = 10
+2 + 1 = 3     2 + 2 = 4  ... 2 + 9 = 11
+...
+9 + 1 = 10   9 + 2 = 11  ... 9 + 9 = 18
+
+public class HelloWorld{
+    
+    public static void main(String []args){
+        
+        int[][] a;
+        a=new int[9][9]; 
+        for (int i = 0; i < 9; i++) { 
+        for (int j = 0; j < 9; j++) { 
+        System.out.print((i+1)+"+"+(j+1)+"="+((i+1)+(j+1))); 
+        System.out.print(" "); 
+        } 
+        System.out.println(" "); 
+ }}}
+2 вар
+
+public class HelloWorld{
+    
+    public static void print(int number, int columns, int rows)
+    {
+        for(int i = 0; i < rows; i++)
+        {
+            {for(int j = 0; j < columns; j++)
+            
+                System.out.print((j+1)+"+"+(i+1) + "=" + ((j+1) + (i+1)) + " ");    
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String []args){
+        
+        print(1, 9, 9);
+    
+    }
+}
+3 вар с ровными строками \t
+
+public class HelloWorld{
+    
+    public static void main(String []args){
+        
+        int[][] a;
+        a=new int[9][9]; 
+        for (int i = 0; i < 9; i++) { 
+        for (int j = 0; j < 9; j++) { 
+        System.out.print((i+1) + "+"+(j+1)+"="+((i+1)+(j+1))); 
+        System.out.print(" ");
+        System.out.print("" +"\t");
+        } 
+        System.out.println(" "); 
+ }}}
+
