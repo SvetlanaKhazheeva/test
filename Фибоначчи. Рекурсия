@@ -1,0 +1,243 @@
+// из занятия 2
+Фибоначчи
+
+//Task 4
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int f1 = 1;
+        int f2 = 1;
+        
+        int n = 10;
+        
+        if(n > 0)
+        {
+            System.out.print(f1 + " " + f2 + " ");
+            
+            for(int i = 3; i <= n; i++)
+            {
+                int fk = f1 + f2;
+                System.out.print(fk + " ");
+                f1 = f2;
+                f2 = fk;
+            }
+        }
+     }
+}
+
+решение через рекурсию
+
+public class HelloWorld{
+
+    public static int fibonacci(int n)
+    {
+        if((n == 1) || (n == 2))
+            return 1;
+        else
+            return fibonacci(n-1) + fibonacci(n-2);
+    }
+    
+    public static void main(String []args){
+        
+        for(int i = 1; i <= 20; i++)
+            System.out.print(fibonacci(i) + " ");    
+    }
+}
+
+//Task 5 из метода и функции
+
+Написать рекурсивную функцию
+для вычисления факториала натурального числа n
+
+1) через цикл 
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int n = 10; 
+    {
+        int result = 1;
+        for (int i = 1; i <= n; i++) 
+        
+        result = result * i;
+        
+        System.out.println(result);
+    }
+        
+    }
+}
+    
+2) 2 вар
+public class HelloWorld{
+
+     public static void main(String []args){
+
+    int n = 5; 
+    
+    {
+    if (n < 0) 
+    
+        {
+        System.out.println("value < 0");
+        }
+   
+    int result = 1;
+    if (n == 0) 
+        {
+        System.out.println(result);
+        }
+    
+    for (int i = 1; i <= n; i++) 
+        {
+        result = result * i;
+        }
+        System.out.println(result);
+    }
+    }
+}
+
+3) по рекрусивной функции
+
+   public class HelloWorld{
+
+    public static long factorial(long n)
+    
+    {   if((n == 0) || (n == 1))
+            return 1;
+        
+        else
+            return n * factorial(n-1);
+    }
+    
+    public static void main(String []args){
+        
+            System.out.print(factorial(15) + " ");    
+    }
+}
+
+long числа от факториала больше 13
+int - меньше = 12
+
+
+// Task 6
+Реализовать функцию нахождения минимума:
+1.Из трёх чисел
+2.Из четырёх чисел
+
+1.
+public class HelloWorld{
+    
+    public static int minOfThreeElements(int a, int b, int c)
+    {
+        int min;
+        
+        if((a < b) && (a < c))
+            min = a;
+        
+        else if((b < a) && (b < c))
+            min = b;
+        
+        else
+            min = c;
+        
+        return min;
+    }
+    
+    public static void main(String []args){
+        
+        int a = 10;
+        int b = 5;
+        int c = 2;
+        
+        System.out.println(minOfThreeElements(a, b, c));
+    }
+}
+
+2. 
+public class HelloWorld{
+    
+    public static int minOfFourElements(int a, int b, int c, int d)
+    {
+        int min;
+        
+        if((a < b) && (a < c) && (a < d))
+            min = a;
+        
+        else if((b < a) && (b < c) && (b < d))
+            min = b;
+            
+        else if((c < a) && (c < b) && (c < d))
+            min = c;
+            
+        else
+            min = d;
+        
+        return min;
+    }
+    
+    public static void main(String []args){
+        
+        int a = 200;
+        int b = 50;
+        int c = 200;
+        int d = 100;
+        
+        
+        System.out.println(minOfFourElements(a, b, c, d));
+    }
+}
+        
+
+// task 7
+Даны стороны двух треугольников. 
+Найти сумму их периметров и сумму их площадей.
+(Определить процедуру для расчета периметра и площади
+треугольника по его сторонам.)
+
+// Triangle
+
+public class HelloWorld{
+
+    public static boolean isTriangle(double a, double b, double c)
+    {
+        if((a + b > c) && (b + c > a) && (a + c > b) && (a > 0) && (b > 0) && (c > 0))
+            return true;
+        else
+            return false;
+    }
+
+    public static double perimetr(double a, double b, double c)
+    {
+        if(isTriangle(a,b,c) == true)
+            return a + b + c;
+        else
+            return 0;
+    }
+    
+    public static double square(double a, double b, double c)
+    {
+        if(isTriangle(a,b,c) == true)
+        {
+            double p = perimetr(a,b,c) / 2;
+        
+            double s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        
+            return s;    
+        }
+        else
+            return 0;
+    }
+    
+    public static void main(String []args){
+    
+        System.out.println(perimetr(-3,4,5));
+        System.out.println(square(3,4,-5));
+        System.out.println(perimetr(10,4,5));
+        System.out.println(square(3,4,15));
+        System.out.println(square(3,4,5));
+    
+    }
+}
+    
+
