@@ -1,0 +1,727 @@
+// Задание 1
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        byte x = 10;
+     
+        System.out.println(x);
+    }
+}
+
+// Задание 2
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int x = 10;
+        System.out.println(x);
+        
+        double y = 30;
+        System.out.println(y);
+        
+        String z = "Welcome";
+        System.out.println(z);
+        
+        boolean b = false;
+        System.out.println(b);
+    }
+}
+
+// Task 1
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int day = 234;
+        int weeks = day / 7;
+        
+        System.out.println("Weeks =" + weeks );
+        
+
+// Task 1
+С некоторого момента прошло 234 дня. 
+Сколько полных недель прошло за этот период? А месяцев?
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int x1 = 10;
+        int y1 = 3;
+        System.out.println(x1/y1);
+        
+        double x2 = 10;
+        double y2 = 3;
+        System.out.println(x2/y2);
+        
+        int x3 = 10;
+        double y3 = 3;
+        System.out.println(x3/y3);
+        
+        double x4 = 10;
+        int y4 = 3;
+        System.out.println(x4/y4);
+    }
+}
+// Task 2
+Данодвузначноечисло 39. Найти:1.числодесятковвнем;2.числоединицвнем;3.суммуегоцифр;4.произведениеегоцифр.
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int number = 39;
+        int d = number / 10;
+        int e = number % 10;
+        int s = d + e;
+        int p = d * e;
+        
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(s);
+        System.out.println(p);
+    }
+}
+
+// Task 3
+Найтидлинуокружностирадиуса 4
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        double r = 4;
+        double c = 2 * Math.PI * r ;
+        
+        System.out.println(c);
+        }
+}
+// Task 4
+ИзвестнозначениетемпературыпошкалеЦельсия 36,6. 
+Найтисоответствующеезначениетемпературыпошкале:1.Фаренгейта;2.Кельвина.
+ДляпересчетапошкалеФаренгейтанеобходимоисходноезначениетемпературы
+умножитьна  1,8 икрезультатуприбавить  32, а
+по шкале Кельвина абсолютноез начениенулясоответствует 273,15 градусапошкалеЦельсия.
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        double t = 36.6;
+        double F = t * 1.8 + 32 ;
+        double C = t + 273.15 ;
+        
+        System.out.println(F);
+        System.out.println(C);
+        }
+}
+
+// Task 5
+Данотрехзначноечисло. Найти:1.числоединицвнем;2.числодесятковвнем;3.суммуегоцифр;4.произведениеегоцифр.
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int number = 105;
+        int s = number / 100;
+        int d = number % 100 / 10;
+        int e = number % 10;
+        
+        System.out.println("s =" + s);
+        System.out.println("d =" + d);
+        System.out.println("e =" + e);
+        
+        System.out.println("Sum =" + (s + d + e));
+        System.out.println("Multi =" + (s * d * e));
+        }
+}
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int x = 40;
+        int y = 20;
+        
+        boolean b = x > y;
+        
+        System.out.println(b);
+        
+        }
+
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int x = 40;
+        int y = 20;
+        int z = 10;
+        
+        boolean b1 = (x > y) && (x > z);
+        System.out.println(b1);
+        
+        boolean b2 = (x > y) && (x < z);
+        System.out.println(b2);
+        
+        boolean b3 = (x > y) || (x < z);
+        System.out.println(b3);
+        
+        boolean b4 = (x < y) || (x < z);
+        System.out.println(b4);
+        
+
+ public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int x = 10;
+        int y = 20;
+       
+        boolean b1 = (x == y);
+        System.out.println(b1);
+        
+        boolean b2 = (x != y);
+        System.out.println(b2);
+        
+        boolean b4 = (x <= y);
+        System.out.println(b4);
+        
+        boolean b5 = (x >= y);
+        System.out.println(b5);
+        
+        boolean b6 = (x < y) | (x > y);
+        System.out.println(b6);
+
+
+// Task 6
+Известныплощадикругаиквадрата. 
+Определить: 1.уместитсяликругвквадрате? 
+2.уместитсяликвадратвкруге?
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        double Skv = 100;
+        double Skr = 200;
+        
+        double a = Math.sqrt(Skv); 
+        double r = Math.sqrt(Skr) / Math.PI;
+        
+        boolean b1 = (r <= a / 2);
+        boolean b2 = (a <= r * Math.sqrt(2));
+        
+        System.out.println ("Will a circle fit in a square?");
+        System.out.println(b1);
+        
+        System.out.println ("Will a square fit in a circle?");
+        System.out.println(b2);
+        
+        }
+
+ДОП ввод и вывод
+
+// output println()
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        String s = "test";
+        System.out.println(s); 
+        
+        int a = 10; 
+        System.out.println(a);
+        
+        boolean b = true;
+        System.out.println(b);
+        
+        int x = 10; 
+        int y = 20; 
+        System.out.println(x + y);
+        
+        System.out.println(s + a);
+    
+
+    
+// output print()
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        String s = "test\n";
+        System.out.print(s); 
+        
+        System.out.print("Hello World\n");
+        System.out.print("Hello World\t");
+        System.out.print("Hello World");
+        }
+}
+
+// output printf()
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int x = 10; 
+        int y = 20; 
+        
+        System.out.printf("%d + %d = %d", x, y, x+y);
+        }
+}
+
+
+import java.util.Scanner;
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        Scanner sc = new Scanner(System.in);
+        
+        int x = sc.nextInt(); 
+      
+        System.out.println(x);
+        
+        double x1 = sc.nextDouble(); 
+      
+        System.out.println(x1);
+        }
+
+
+
+
+import java.util.Scanner;
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        Scanner sc = new Scanner(System.in);
+        
+        int x = sc.nextInt(); 
+        System.out.println(x);
+        
+        int x2 = sc.nextInt(); 
+        System.out.println(x2);
+        
+        int x3 = sc.nextInt(); 
+        System.out.println(x3);
+        
+        int x4 = sc.nextInt(); 
+        System.out.println(x4);
+    
+
+
+// Task 7
+
+Данонатуральноечисло. 
+Определить: 1.являетсялионочетным; 
+2.оканчиваетсялионоцифрой 7
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        
+        int x = 11;
+        int y = x%2;
+        
+        if (y==0) 
+        System.out.println("Chet");
+        
+        else 
+        System.out.println("Nechet");
+
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        
+        int x = 7;
+        int y = x%10;
+        
+        if (y==7)
+        System.out.println("Ends 7");
+        
+        else
+        System.out.println("Not ends 7");
+     }
+
+
+// Task 8
+Составитьпрограмму, котораяуменьшаетпервоевведенноечисловдвараза, 
+еслионобольшевтороговведенногочислапоабсолютнойвеличине.
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        
+        int a = 155;
+        int b = 65;
+        
+        if (a>b)
+        System.out.println(a/2);
+        
+        else
+        System.out.println("a<b");
+     }
+}
+
+
+
+// Task 9    
+Известенвесбоксера-любителя. Известно, чтовестаков, чтобоксерможетбытьотнесенкоднойизтрехвесовыхкатегорий: 
+1.легкийвес — до 60 кг; 2.среднийвес — до 75 кг; 3.тяжелыйвес — до 91 кг;4.супертяжелыйвес – с 91 кг.
+Определить, вкакойкатегориибудетвыступатьданныйбоксер.
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        int w = 58;
+       
+        System.out.println("w = " + w);
+        
+        
+        if(90 >= w && w >= 75) 
+        {
+            System.out.println("heavy");
+        }
+        else if (60 <= w && w <= 74) 
+        {
+            System.out.println("middle");
+        }
+        
+        else if(59 >= w) 
+        {
+            System.out.println("easy");
+        }
+        else
+        {
+            System.out.println("super heavy");
+        }
+     }
+}
+
+// Task 10
+Составитьпрограмму, котораявзависимостиотпорядковогономераднянедели (1, 2, ..., 7) 
+выводитнаэкранегоназвание (понедельник, вторник, ..., воскресенье).
+
+public class HelloWorld{
+
+     public static void main(String []args){
+         int dayOfWeek = 4;
+         
+         switch (dayOfWeek) {
+         case 1: System.out.println("Monday");
+            break;
+         case 2: System.out.println("Tuesday");
+            break;
+         case 3: System.out.println("Wednesday");
+            break;     
+         case 4: System.out.println("Thursday");
+            break;
+         case 5: System.out.println("Friday");
+            break;
+         case 6: System.out.println("Saturday");
+            break;
+         case 7: System.out.println("Sunday");
+            break;
+         default:
+             System.out.println("Incorrect number");
+        
+         }
+
+
+// Task самостоятельная работа 1
+Вчемпионатепофутболукомандезавыигрышдается 3 очка, 
+запроигрыш — 0, заничью — 1. Известноколичествоочков, 
+полученныхкомандойзаигру. Определитьсловесныйрезультатигры (выигрыш, проигрышилиничья)
+
+public class HelloWorld{
+
+    public static void main(String []args){
+         
+         int score = 1;
+         
+         int win = 3;
+         int lost = 0;
+         int draw = 1;
+         
+         if ( score == win )
+         {
+             System.out.println("WIN");
+             
+         }
+         
+         if ( score == lost )
+         {
+             System.out.println("LOST");
+         }
+         
+         if ( score == draw )
+         {
+             System.out.println("DRAW");
+         }
+         
+     }
+}
+
+// Task SR 2
+Даны радиус круга и сторона квадрата. У какой фигуры площадь больше?
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+         double Rkr = 1;
+         double Akv = 2;
+         
+         double Skr = ( Math.PI * Math.pow (Rkr,2) );
+         double Skv = ( Math.pow (Akv,2) );
+         
+         if ( Skr > Skv )
+         {
+             System.out.println("Skr is bigger Skv");
+         
+         }
+         
+        else if ( Skr < Skv )
+         {
+             System.out.println("Skv is bigger Skr");
+             
+         }
+         
+         else
+         {
+             System.out.println("Oni ravny");
+         }
+     }
+}
+
+
+
+// Task SR 3
+Дано двузначное число. Определить:
+1. Является ли сумма его цифр двузначным числом
+2. Больше ли числа а сумма его цифр
+
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int number = 85;
+        int d = number % 100 / 10;
+        int e = number % 10;
+        
+        int S = (d + e);
+        
+         if (S > 9 && S < 100 )
+         {
+             System.out.println("it's a two digit number");
+         
+         }
+         
+         else
+         {
+             System.out.println("it's NOT a two digit number");
+         }
+       }
+}
+
+// Task SR 3/2
+public class HelloWorld{
+
+     public static void main(String []args){
+       
+        int number = 70;
+        int a = number % 100 / 10;
+        int b = number % 10;
+        
+        int S = (a + b);
+        
+         if (S >= a)
+         
+         {
+             System.out.println("Summa more/ravna a");
+         
+         }
+         
+         else
+         {
+             System.out.println("Summa NOT more a");
+         }        
+         
+
+// Task SR 4 / 1
+Даны три вещественных числа a, b, c. Проверить:
+1. выполняется ли неравенство a < b < c;
+2. выполняется ли неравенство b > a > c.
+
+public class HelloWorld{
+
+    public static void main(String []args){
+    
+         double a = 1;
+         double b = 2;
+         double c = 4;
+         
+         if (a < b && b < c )
+         {
+             System.out.println("neravenstvo vupolneno");
+         }
+         
+         else
+         {
+             System.out.println("neravenstvo NO vupolneno");
+         }
+         
+     }
+}
+
+// Task SR 4 / 1
+public class HelloWorld{
+
+    public static void main(String []args){
+    
+         double a = 4;
+         double b = 6;
+         double c = 2;
+         
+         if ( b > a && a > c )
+         {
+             System.out.println("neravenstvo vupolneno");
+         }
+         
+         else
+         {
+             System.out.println("neravenstvo NO vupolneno");
+         }
+         
+         
+        }
+}
+
+// Task SR 5
+Даны два числа. 
+Если квадратный корень из второго числа меньше первого числа, то увеличить
+второе число в пять раз.
+
+public class HelloWorld{
+
+    public static void main(String []args){
+    
+         int x = 8;
+         int y = 6;
+         
+         if ( Math.sqrt(y) < x)
+         {
+         System.out.println(y * 5);
+         }
+         
+         else
+         {
+         System.out.println("sqrt(y) more x");
+         }
+         
+         
+        }
+}
+
+// Task 12
+Гражданин 1 марта открыл счет в банке, вложив 1000 руб. Через каждый месяц размер
+вклада увеличивается на 2% от имеющейся суммы. Определить:
+1. за какой месяц величина ежемесячного увеличения вклада превысит 30 руб.;
+2. через сколько месяцев размер вклада превысит 1200 руб
+
+public class HelloWorld{
+    
+    public static String ReturnMes(int CurrentMonth) {
+        switch (CurrentMonth) {
+            case 1:
+                return "Jan";
+            case 2:
+                return "Feb";
+            case 3:
+                return "Mar";
+            case 4:
+                return "Apr";
+            case 5:
+                return "May";
+            case 6:
+                return "Jun";
+            case 7:
+                return "Jul";
+            case 8:
+                return "Aug";
+            case 9:
+                return "Sep";
+            case 10:
+                return "Okt";
+            case 11:
+                return "Nov";
+            case 12:
+                return "Dec";
+            default:
+                return "ERROR";
+        }
+    }
+    
+    public static String ReturnYear(int CurrentYear) {
+        switch (CurrentYear) {
+            case 0:
+                return "current year";
+            case 1:
+                return "next year";
+            case 2:
+                return "in two years";
+            default:
+                return "ERROR";
+        }
+    }
+
+     public static void main(String []args){
+        int Vklad = 1000;
+        int Month = 0;
+        int Task1Month = 0;
+        int Task1Year = 0;
+        int CurrentMonth = 3;
+        double Delta = 0;
+        
+        //Month = (int) Math.ceil(30 / (0.02*Vklad));
+        
+        
+        while (Delta<=30) {
+            Month = Month + 1;
+            Delta = Delta + 0.02*Vklad;
+        }
+
+
+        Task1Month = ((CurrentMonth + Month)%12 == 0) ? 12 :  (CurrentMonth + Month)%12;
+        
+        Task1Year = ((CurrentMonth + Month)/12 > 0)&&(Task1Month==12) ? (CurrentMonth + Month)/12-1 :  (CurrentMonth + Month)/12;
+        
+        System.out.printf("The amount of percentage from the deposit will exceed 30rbl in %s  %s \n", ReturnMes(Task1Month),  ReturnYear(Task1Year));
+        
+        //double Task2 = (1200 - Vklad) / (0.02*Vklad);
+        
+        Delta = 1000;
+        Month = 0;
+        
+        while (Delta<=1200) {
+            Month = Month + 1;
+            Delta = Delta + 0.02*Vklad;
+            //System.out.println("" + Month + " Delta " + Delta);
+        }
+        
+        
+        //System.out.println("\n");
+        System.out.println("The amount of the deposit will exceed 1200 rbl in " + Month);
+     }
+}
