@@ -1,0 +1,52 @@
+--1. Найти самый дорогой товар. Вывести имя товара и его цену
+SELECT g.name AS goods_name, p.value AS price FROM goods g
+	JOIN prices p ON g.id = p.goods_id
+WHERE p.value = (SELECT MAX(prices.value) FROM prices)
+
+
+
+--2. Найти товары с нулевым остатком. Вывести имя товара и его цену
+SELECT g.name, p.value  FROM goods g
+	JOIN prices p ON g.id = p.goods_id
+	JOIN quantity q ON g.id = q.goods_id
+WHERE q.value = 0	
+
+
+
+--3. Найти производителя с самой большой средней ценой за товары. Вывести имя производителя и среднюю стоимость
+-- 1 вариант решения	
+SELECT m.name AS manufacturer_name, ROUND(AVG(p.value), 2) AS max_avg_price 
+FROM manufacturer m 
+	JOIN suppliers s ON m.id = s.manufacturer_id
+	JOIN goods g ON s.id = g.supplier_id
+	JOIN prices p ON g.id = p.goods_id
+GROUP BY m.name
+HAVING ROUND(AVG(p.value), 2) = (SELECT MAX(avg_price) FROM (SELECT ROUND(AVG(p.value), 2) avg_price
+FROM manufacturer m 
+	JOIN suppliers s ON m.id = s.manufacturer_id
+	JOIN goods g ON s.id = g.supplier_id
+	JOIN prices p ON g.id = p.goods_id
+GROUP BY m.name) AS max_avg_price)
+
+-- 2 вариант решения	
+SELECT m.name, ROUND(AVG(p.value), 2) AS max_avg_price FROM manufacturer m 
+	JOIN suppliers s ON m.id = s.manufacturer_id
+	JOIN goods g ON s.id = g.supplier_id
+	JOIN quantity q ON g.id = q.goods_id
+	JOIN prices p ON g.id = p.goods_id
+GROUP BY m.name 
+ORDER BY
+AVG(p.value) 
+DESC
+LIMIT 1
+
+
+
+--4. Найти все товары производителей из Москвы. Вывести имена товаров, их цены и имена производителей
+SELECT g.name AS goods_name, p.value AS prices, m.name AS manufacturer_name  
+FROM manufacturer m
+	JOIN suppliers ON m.id = suppliers.manufacturer_id
+	JOIN goods g  ON suppliers.id = g.supplier_id
+	JOIN prices p ON g.id = p.goods_id
+WHERE m.location = 'Moscow'
+	
